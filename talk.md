@@ -39,75 +39,138 @@ Arduino, senza hardware
 
 [comment]: # (!!!)
 
-## Progettare senza hardware
+## Progettare - non è tutto semplice
 
-Esempio di realizzazione complessa?
+Esempio di realizzazione complessa
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aXW4dqvjFx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Come gestire la complessità ?
 
-- Meccanica
-- Elettronica
-- Programmazione
+- Meccanica / stampa 3D
+- Elettronica e collegamenti
+- Movimenti del robot e programmazione
+- Durata della batteria 
+- Facilità di montaggio
 
 [comment]: # (!!!)
 
+## Quindi, come fare cose complesse?
+
+Bisogna suddividere il problema in problemini più semplici !
+
+[comment]: # (!!! data-auto-animate)
+
+## Quindi, come fare cose complesse?
+
+Bisogna suddividere il problema in problemini più semplici !
+
+![Divide ut impera](media/divide_ut_impera.jpg)
+
+[comment]: # (!!!)
+
+## Spezzetiamo la progettazione
+
+1) Ideazione &#128161;
+
+Definire "cosa" vogliamo ottenere
+
+_Vorrei fare un robot granchio autonomo_
+
+![PicoCrab2](media/picocrab2.jpg)
+
+[comment]: # (!!! data-auto-animate)
 ## Processo di progettazione
 
-Tipicamente:
-- Ideazione
-- Progettazione
-- Prototipaggio
-- Validazione 
-- Produzione
+2) Progettazione componenti &#129691;
 
-Note:
-- Progettazione: schemi, disegni 2D / 3D
-- Prototipaggio : creazione del circuito, su computer o reale
-- Validazione: prove pratiche, verifica delle funzionalità ottenute
-- Produzione: creazione PCB
+_Definire come costruire l'oggetto_
+
+![PicoCrab2](media/3d%20model.png)
+
+[comment]: # (!!! data-auto-animate)
+## Processo di progettazione
+
+3) Progettazione software &#128430;
+
+_come fare funzionare l'oggetto?_
+
+![alt text](media/software.png)
+
+[comment]: # (!!! data-auto-animate)
+## Processo di progettazione
+
+4) Prototipaggio &#9989;
+
+_costruzione_
+
+[comment]: # (!!! data-auto-animate)
+## Processo di progettazione
+
+5) Validazione &#9989;
+
+_prove e debugging_
+
+[comment]: # (!!! data-auto-animate)
+## Processo di progettazione
+
+6) Produzione &#127981;
+
+_PCB, istruzioni e pubblicazione_
+
+![Link Youtube](https://www.youtube.com/watch?v=OX7sPU7V-u0)
 
 [comment]: # (!!!)
 
-## Dove fare a meno dell'hardware?
+## Utilità simulazione
 
-Hardware != Software
+![Simulazione](media/simulazione.gif)
 
-Dove può essere utile sostituire l'hardware con una simulazione ?
+Note:
+- Simulazione velocizza la progettazione &#128644;
+- Simulazione usa la matematica &#8747;&#8730;
+- A volte la realizzazione costa troppo o è impraticabile &#128178;
 
-- Fase di prototipaggio
+[comment]: # (!!!)
 
-Errori di schema
-Pin sbagliati
-Disturbi
+## Nel mondo di Arduino
 
-- Errori software
-
-Fase di validazione
-Stress-testing
-- Test-suite automatizzata
+| Fase progettuale | Tipo di problema | Simulazione possibile |
+| -- | -- | -- |
+| Ideazione | Capire le funzioni richieste | Sì, sketch
+| Progettazione HW | Errori sullo schema elettrico | Sì (tinkercad, wokwi...)
+| Progettazione HW | Pin sbagliati | Sì (tinkercad, wokwi...)
+| Progettazione HW | Componenti diversi | Sì (tinkercad, wokwi...)
+| Progettazione HW | Consumo elettrico | No, misurare su prototipo
+| Progettazione SW | Pin sbagliati | Sì (tinkercad, wokwi...)
+| Progettazione SW | Troppo veloce o troppo lento | Sì con limitazioni
+| Prototipaggio | Stampa 3D componenti | Sì (software di disegno)
+| Produzione | Costi di fabbricazione | Sì (strumenti online)
 
 [comment]: # (!!!)
 
 ## Altre considerazioni
 
-La velocità
+Un progetto ha un vita...
 
-Non sostituisce l'hardware
+- Cambiano le board Arduino
+- Cambiano le librerie del progetto
 
+La simulazione aiuta a testare le modifiche velocemente
 
 [comment]: # (!!!)
 
 ## Strumenti di simulazione
 
-* Simulazione circuiti (LTSpice) <!-- element align="left" --> 
+* Simulazione meccanica del robot (ad es. Fusion 360)
+
+* Simulazione circuiti (LTSpice)
 -- Consente di testare circuiti analogici/senza microprocessori
 
-* Simulazione programma <!-- element align="left" --> 
+* Simulazione programma 
 -- Emulatori (QEmu) - limiti delle periferiche
 
-* Simulazione integrata HW+SW <!-- element align="left" --> 
+* Simulazione integrata HW+SW
 -- TinkerCAD
 -- WokWi
 
@@ -174,6 +237,15 @@ $$ U = R . I $$
 
 - Una resistenza
 - Due resistenze in serie
+
+[comment]: # (!!!)
+
+## Demo LTSpice
+
+* Gratuito
+* [https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html](https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html)
+
+![LTSpice](media/ltspice.jpg)
 
 [comment]: # (!!!)
 
