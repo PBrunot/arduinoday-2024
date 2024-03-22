@@ -47,11 +47,17 @@ Esempio di realizzazione complessa
 
 Come gestire la complessità ?
 
+[comment]: # (!!! data-auto-animate)
+## Progettare - non è tutto semplice
+
+Come gestire la complessità ?
+
 - Meccanica / stampa 3D
 - Elettronica e collegamenti
+- Potenza richiesta dai motori ?
 - Movimenti del robot e programmazione
-- Durata della batteria 
-- Facilità di montaggio
+- Durata della batteria ?
+- Facilità di montaggio ?
 
 [comment]: # (!!!)
 
@@ -69,9 +75,9 @@ Bisogna suddividere il problema in problemini più semplici !
 
 [comment]: # (!!!)
 
-## Spezzetiamo la progettazione
+## Tagliamo la progettazione a pezzi
 
-1) Ideazione &#128161;
+Ideazione &#128161;
 
 Definire "cosa" vogliamo ottenere
 
@@ -79,19 +85,27 @@ _Vorrei fare un robot granchio autonomo_
 
 ![PicoCrab2](media/picocrab2.jpg)
 
+Note:
+- Quante gambe?
+- Con o senza filo ?
+- Piccolo o medio ?
+
 [comment]: # (!!! data-auto-animate)
 ## Processo di progettazione
 
-2) Progettazione componenti &#129691;
+Progettazione componenti &#129691;
 
 _Definire come costruire l'oggetto_
 
 ![PicoCrab2](media/3d%20model.png)
 
+Note:
+- Modello 3D
+
 [comment]: # (!!! data-auto-animate)
 ## Processo di progettazione
 
-3) Progettazione software &#128430;
+Progettazione software &#128430;
 
 _come fare funzionare l'oggetto?_
 
@@ -100,25 +114,27 @@ _come fare funzionare l'oggetto?_
 [comment]: # (!!! data-auto-animate)
 ## Processo di progettazione
 
-4) Prototipaggio &#9989;
+Prototipaggio &#9989;
 
 _costruzione_
+
+![Prototipo](media/prototipo.png)
 
 [comment]: # (!!! data-auto-animate)
 ## Processo di progettazione
 
-5) Validazione &#9989;
+Validazione &#9989;
 
 _prove e debugging_
 
 [comment]: # (!!! data-auto-animate)
 ## Processo di progettazione
 
-6) Produzione &#127981;
+Produzione &#127981;
 
 _PCB, istruzioni e pubblicazione_
 
-![Link Youtube](https://www.youtube.com/watch?v=OX7sPU7V-u0)
+<https://www.youtube.com/watch?v=OX7sPU7V-u0>
 
 [comment]: # (!!!)
 
@@ -133,22 +149,6 @@ Note:
 
 [comment]: # (!!!)
 
-## Nel mondo di Arduino
-
-| Fase progettuale | Tipo di problema | Simulazione possibile |
-| -- | -- | -- |
-| Ideazione | Capire le funzioni richieste | Sì, sketch
-| Progettazione HW | Errori sullo schema elettrico | Sì (tinkercad, wokwi...)
-| Progettazione HW | Pin sbagliati | Sì (tinkercad, wokwi...)
-| Progettazione HW | Componenti diversi | Sì (tinkercad, wokwi...)
-| Progettazione HW | Consumo elettrico | No, misurare su prototipo
-| Progettazione SW | Pin sbagliati | Sì (tinkercad, wokwi...)
-| Progettazione SW | Troppo veloce o troppo lento | Sì con limitazioni
-| Prototipaggio | Stampa 3D componenti | Sì (software di disegno)
-| Produzione | Costi di fabbricazione | Sì (strumenti online)
-
-[comment]: # (!!!)
-
 ## Altre considerazioni
 
 Un progetto ha un vita...
@@ -160,23 +160,20 @@ La simulazione aiuta a testare le modifiche velocemente
 
 [comment]: # (!!!)
 
-## Strumenti di simulazione
+## Tipi di simulazione
 
+Simulazione fisica
 * Simulazione meccanica del robot (ad es. Fusion 360)
-
 * Simulazione circuiti (LTSpice)
--- Consente di testare circuiti analogici/senza microprocessori
+* Simulazione elettromagnetica (antenna), calore, ...
 
-* Simulazione programma 
--- Emulatori (QEmu) - limiti delle periferiche
-
-* Simulazione integrata HW+SW
--- TinkerCAD
--- WokWi
+Simulazione programma
+* Emulatori (QEmu)
+* Simulazione board e componenti digitali (TinkerCAD, WokWi)
 
 [comment]: # (!!!)
 
-## Misura dell’elettricità
+## Riassunto di fisica
 
 Tante unità diverse per l'elettricità
 - L'unità di Alessandro Volta (inventore della pila)
@@ -254,45 +251,103 @@ $$ U = R . I $$
 Circuito analogico con transistor, condensatori, led, resistenze
 Blinker
 
+![Blinker](media/lt-blinker.png)
+
+Note:
+- Semplice o complicato?
+- Bisogna essere familiare con la misura
+- Servono più a VALIDARE un design rispetto a CREARLO DA ZERO
+
 [comment]: # (!!!)
 
-## Come funziona?
+## Come funzionano le simulazioni ?
 
 Calcoli matematici
 Conservazione delle cariche elettriche (Leggi di Kirshoff)
 Semplificazione circuito (Thèvenin)
 Linearizzazione
 
+Note:
+- Ci vogliono più strumenti per simulare un sistema completo
+- Per un prodotto come un iphone ci vogliono centinaie di specialisti
+
 [comment]: # (!!!)
 
 ## Wokwi
 
-USo semplice nel browser
-Circuito da creare
-Codice arduino
+![Wokwi](media/wokwi.jpg)
+
+Veloce e non devi comprare nulla
+Si può sbagliare - i componenti non si bruciano
+Facile da condividere
+Molti esempi da cui partire
+
+Note:
+- Completamente gratuito, alcune funzioni avanzate a pagamento (ma gratuite in beta)
 
 [comment]: # (!!!) 
 
-## Limitazioni simulazione digitale
+## Esempio con Arduino
 
-R,C
+Blink
 
 [comment]: # (!!!)
 
-## Uso avanzato
-Aggiungere periferiche
-Codice arduino
+## Esempi avanzati
+
+- Aggiungere periferiche
+- Codice arduino integrato
+- Esempio PONG
+
+https://wokwi.com/projects/348849468083274322
+
+Note:
+- Simulazione input utente
 
 [comment]: # (!!!)
 
 ## Estensione Wokwi
 
-Creare un chip in C
+* Creare un chip in C
+* https://docs.wokwi.com/chips-api/getting-started
+
+Note:
+- Serve familiarità con il C perché ci sono allocazioni dinamiche (malloc)
+- Buoni esempi che coprono SPI, timers, ...
 
 [comment]: # (!!!)
 
+## Integrazione continua
 
-Uso avanzato
-- CI con Github
-- VSCode extension 
+* Come testare ogni volta che si fa una modifica?
+* Github + Actions
+* Esempio [RFID](https://github.com/PBrunot/rfid-arduino-copy/actions/workflows/tests.yml)
 
+
+Note:
+- Un buon programmatore deve essere anche un po' pigro
+
+[comment]: # (!!!)
+
+## Fine
+
+![Arduino day](media/ADAYS2024.svg)
+
+[comment]: # (!!!)
+## Extra slides
+
+[comment]: # (!!!)
+
+## Nel mondo di Arduino
+
+| Fase progettuale | Tipo di problema | Simulazione possibile |
+| -- | -- | -- |
+| Ideazione | Capire le funzioni richieste | Sì, sketch
+| Progettazione HW | Errori sullo schema elettrico | Sì (tinkercad, wokwi...)
+| Progettazione HW | Pin sbagliati | Sì (tinkercad, wokwi...)
+| Progettazione HW | Componenti diversi | Sì (tinkercad, wokwi...)
+| Progettazione HW | Consumo elettrico | No, misurare su prototipo
+| Progettazione SW | Pin sbagliati | Sì (tinkercad, wokwi...)
+| Progettazione SW | Troppo veloce o troppo lento | Sì con limitazioni
+| Prototipaggio | Stampa 3D componenti | Sì (software di disegno)
+| Produzione | Costi di fabbricazione | Sì (strumenti online)

@@ -3,6 +3,7 @@
 Talk/workshop per Arduino Day 2024 intitolato "Arduino senza hardware"
 
 Contenuti
+
 - Utilità della simulazione
 - Unità e accenno a formule
 - Simulazione analogica con LTSpice, applicata alla legge di Ohm
@@ -12,7 +13,7 @@ Contenuti
 
 ## Come generare la presentazione
 
-Requisiti : installare mdslides da https://gitlab.com/da_doomer/markdown-slides :
+Requisiti : installare mdslides da <https://gitlab.com/da_doomer/markdown-slides> :
 
 ```ps
 pip install git+https://gitlab.com/da_doomer/markdown-slides.git
