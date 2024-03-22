@@ -37,6 +37,8 @@ Arduino, senza hardware
 
 24 marzo 2024
 
+<https://pbrunot.github.io/arduinoday-2024>
+
 [comment]: # (!!!)
 
 ## Progettare - non è tutto semplice
@@ -344,6 +346,9 @@ Note:
 ## Fine
 
 ![Arduino day](media/ADAYS2024.svg)
+
+Copia presentazione:
+<https://pbrunot.github.io/arduinoday-2024>
 
 [comment]: # (!!!)
 ## Extra slides
