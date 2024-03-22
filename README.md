@@ -2,6 +2,8 @@
 
 Talk/workshop per Arduino Day 2024 intitolato "Arduino senza hardware"
 
+<https://pbrunot.github.io/arduinoday-2024/>
+
 Contenuti
 
 - Utilità della simulazione
