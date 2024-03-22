@@ -134,6 +134,10 @@ Produzione &#127981;
 
 _PCB, istruzioni e pubblicazione_
 
+Esempio:
+<https://www.kevsrobots.com/blog/picocrab2.html>
+
+Video:
 <https://www.youtube.com/watch?v=OX7sPU7V-u0>
 
 [comment]: # (!!!)
@@ -262,10 +266,10 @@ Note:
 
 ## Come funzionano le simulazioni ?
 
-Calcoli matematici
-Conservazione delle cariche elettriche (Leggi di Kirshoff)
-Semplificazione circuito (Thèvenin)
-Linearizzazione
+- Calcoli matematici
+- Conservazione delle cariche elettriche (Leggi di Kirshoff)
+- Semplificazione circuito (Thèvenin)
+- Linearizzazione per risolvere equazioni differenziali
 
 Note:
 - Ci vogliono più strumenti per simulare un sistema completo
@@ -277,10 +281,12 @@ Note:
 
 ![Wokwi](media/wokwi.jpg)
 
-Veloce e non devi comprare nulla
-Si può sbagliare - i componenti non si bruciano
-Facile da condividere
-Molti esempi da cui partire
+Perché?
+
+- Veloce e non devi comprare nulla
+- Si può sbagliare - i componenti non si bruciano
+- Facile da condividere
+- Molti esempi da cui partire
 
 Note:
 - Completamente gratuito, alcune funzioni avanzate a pagamento (ma gratuite in beta)
@@ -290,6 +296,12 @@ Note:
 ## Esempio con Arduino
 
 Blink
+
+<https://wokwi.com/projects/344891652101374548>
+
+Note:
+- Cosa succede se tolgo la resistenza?
+- E nella vita reale ?
 
 [comment]: # (!!!)
 
