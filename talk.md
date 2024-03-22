@@ -153,17 +153,6 @@ Note:
 
 [comment]: # (!!!)
 
-## Altre considerazioni
-
-Un progetto ha un vita...
-
-- Cambiano le board Arduino
-- Cambiano le librerie del progetto
-
-La simulazione aiuta a testare le modifiche velocemente
-
-[comment]: # (!!!)
-
 ## Tipi di simulazione
 
 Simulazione fisica
@@ -329,7 +318,18 @@ Note:
 
 [comment]: # (!!!)
 
-## Integrazione continua
+## Altre considerazioni
+
+Un progetto ha un vita...
+
+- Cambiano le board Arduino
+- Cambiano le librerie del progetto
+
+La simulazione aiuta a testare le modifiche velocemente
+
+[comment]: # (!!!)
+
+## Testare di continuo
 
 * Come testare ogni volta che si fa una modifica?
 * Github + Actions
